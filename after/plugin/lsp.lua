@@ -8,4 +8,13 @@ local lsp = require('lsp-zero').preset({
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
+lsp.on_attach(function(client, bufnr)
+  local opts = {buffer = bufnr}
+  local bind = vim.keymap.set
+
+  bind('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+  bind('n', '<leader>k', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+end)
+
 lsp.setup()
+

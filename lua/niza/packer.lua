@@ -16,9 +16,14 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
+
   use('ghifarit53/tokyonight-vim')
   use('xiyaowong/nvim-transparent')
+  use('joshdick/onedark.vim')
+
   use('tpope/vim-fugitive')
+
+  use('sbdchd/neoformat')
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -42,4 +47,12 @@ return require('packer').startup(function(use)
       {'rafamadriz/friendly-snippets'}, -- Optional
     }
   }
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
 end)
+
