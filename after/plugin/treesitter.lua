@@ -1,5 +1,8 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "help", "javascript", "typescript", "svelte", "html", "css", "rust", "sql", "prisma", "c", "lua", "vim", "help" },
+require"nvim-treesitter.configs".setup {
+  ensure_installed = {
+    "help", "javascript", "typescript", "svelte", "html", "css", "rust", "sql",
+    "prisma", "c", "lua", "vim", "help"
+  },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -15,7 +18,7 @@ require'nvim-treesitter.configs'.setup {
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
   highlight = {
-    enable = true,
+    enable = true
     -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
     -- the name of the parser)
@@ -40,11 +43,11 @@ require'nvim-treesitter.configs'.setup {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = '<C-ä>',
-      node_incremental = '<C-ä>',
-      scope_incremental = '<C-s>',
-      node_decremental = '<C-Backspace>',
-    },
+      init_selection = "<C-ä>",
+      node_incremental = "<C-ä>",
+      scope_incremental = "<C-s>",
+      node_decremental = "<C-Backspace>"
+    }
   },
 
   textobjects = {
@@ -53,42 +56,32 @@ require'nvim-treesitter.configs'.setup {
       lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
       keymaps = {
         -- You can use the capture groups defined in textobjects.scm
-        ['aa'] = '@parameter.outer',
-        ['ia'] = '@parameter.inner',
-        ['af'] = '@function.outer',
-        ['if'] = '@function.inner',
-        ['ac'] = '@class.outer',
-        ['ic'] = '@class.inner',
-      },
+        ["aa"] = "@parameter.outer",
+        ["ia"] = "@parameter.inner",
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner"
+      }
     },
     move = {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
-      goto_next_start = {
-        ['äm'] = '@function.outer',
-        ['ää'] = '@class.outer',
-      },
-      goto_next_end = {
-        ['äM'] = '@function.outer',
-        ['äú'] = '@class.outer',
-      },
+      goto_next_start = { ["äm"] = "@function.outer", ["ää"] = "@class.outer" },
+      goto_next_end = { ["äM"] = "@function.outer", ["äú"] = "@class.outer" },
       goto_previous_start = {
-        ['úm'] = '@function.outer',
-        ['úú'] = '@class.outer',
+        ["úm"] = "@function.outer",
+        ["úú"] = "@class.outer"
       },
       goto_previous_end = {
-        ['úM'] = '@function.outer',
-        ['úä'] = '@class.outer',
-      },
+        ["úM"] = "@function.outer",
+        ["úä"] = "@class.outer"
+      }
     },
     swap = {
       enable = true,
-      swap_next = {
-        ['<leader>a'] = '@parameter.inner',
-      },
-      swap_previous = {
-        ['<leader>A'] = '@parameter.inner',
-      },
-    },
-  },
+      swap_next = { ["<leader>a"] = "@parameter.inner" },
+      swap_previous = { ["<leader>A"] = "@parameter.inner" }
+    }
+  }
 }

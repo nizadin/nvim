@@ -27,8 +27,8 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Diagnostic keymaps
-vim.keymap.set('n', 'úd', vim.diagnostic.goto_prev)
-vim.keymap.set('n', 'äd', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>j', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set("n", "úd", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "äd", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>j", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
