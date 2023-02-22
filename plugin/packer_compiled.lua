@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -114,10 +119,25 @@ _G.packer_plugins = {
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["iceberg.vim"] = {
+    loaded = true,
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/iceberg.vim",
+    url = "https://github.com/cocopon/iceberg.vim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -179,6 +199,12 @@ _G.packer_plugins = {
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    config = { "\27LJ\2\nl\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\23disable_background\2\29disable_float_background\2\nsetup\14rose-pine\frequire\0" },
+    loaded = true,
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -188,6 +214,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/tokyonight-vim",
     url = "https://github.com/ghifarit53/tokyonight-vim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,
@@ -202,6 +233,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\nl\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\23disable_background\2\29disable_float_background\2\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

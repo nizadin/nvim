@@ -16,5 +16,16 @@ lsp.on_attach(function(client, bufnr)
   bind('n', '<leader>k', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
 end)
 
+local cmp = require('cmp')
+
+lsp.setup_nvim_cmp({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+  })
+})
+
 lsp.setup()
 

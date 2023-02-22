@@ -19,7 +19,23 @@ return require('packer').startup(function(use)
 
   use('ghifarit53/tokyonight-vim')
   use('xiyaowong/nvim-transparent')
+
   use('joshdick/onedark.vim')
+
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+      require("rose-pine").setup({
+        disable_background = true,
+	      disable_float_background = true,
+      })
+    end
+  })
+
+  use('cocopon/iceberg.vim');
+
+  use('folke/tokyonight.nvim');
 
   use('tpope/vim-fugitive')
 
@@ -54,5 +70,31 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
+
+  use { -- Set lualine as statusline
+    'nvim-lualine/lualine.nvim',
+    -- See `:help lualine.txt`
+    opts = {
+      options = {
+        icons_enabled = false,
+        theme = 'onedark',
+        component_separators = '|',
+        section_separators = '',
+      },
+    },
+  }
+
+  use { -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim',
+    -- Enable `lukas-reineke/indent-blankline.nvim`
+    -- See `:help indent_blankline.txt`
+    opts = {
+      char = '┊',
+      show_trailing_blankline_indent = false,
+    },
+  }
+
+  -- "gc" to comment visual regions/lines
+  use { 'numToStr/Comment.nvim', opts = {} }
 end)
 

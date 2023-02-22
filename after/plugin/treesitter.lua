@@ -40,10 +40,10 @@ require'nvim-treesitter.configs'.setup {
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = '<c-space>',
-      node_incremental = '<c-space>',
-      scope_incremental = '<c-s>',
-      node_decremental = '<c-backspace>',
+      init_selection = '<C-ä>',
+      node_incremental = '<C-ä>',
+      scope_incremental = '<C-s>',
+      node_decremental = '<C-Backspace>',
     },
   },
 
@@ -65,20 +65,20 @@ require'nvim-treesitter.configs'.setup {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
-        [']m'] = '@function.outer',
-        [']]'] = '@class.outer',
+        ['äm'] = '@function.outer',
+        ['ää'] = '@class.outer',
       },
       goto_next_end = {
-        [']M'] = '@function.outer',
-        [']['] = '@class.outer',
+        ['äM'] = '@function.outer',
+        ['äú'] = '@class.outer',
       },
       goto_previous_start = {
-        ['[m'] = '@function.outer',
-        ['[['] = '@class.outer',
+        ['úm'] = '@function.outer',
+        ['úú'] = '@class.outer',
       },
       goto_previous_end = {
-        ['[M'] = '@function.outer',
-        ['[]'] = '@class.outer',
+        ['úM'] = '@function.outer',
+        ['úä'] = '@class.outer',
       },
     },
     swap = {
