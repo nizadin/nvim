@@ -4,16 +4,24 @@ vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
   -- Packer can manage itself
-  use "wbthomason/packer.nvim"
+  use("wbthomason/packer.nvim")
 
-  use {
+  use("ThePrimeagen/vim-be-good")
+
+  use({
     "nvim-telescope/telescope.nvim",
     tag = "0.1.1",
     -- or                            , branch = '0.1.x',
-    requires = { { "nvim-lua/plenary.nvim" } }
-  }
+    requires = {
+      {
+        "nvim-lua/plenary.nvim"
+      }
+    }
+  })
 
-  use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+  use("nvim-treesitter/nvim-treesitter", {
+    run = ":TSUpdate"
+  })
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
 
@@ -22,47 +30,75 @@ return require("packer").startup(function(use)
 
   use("joshdick/onedark.vim")
 
-  use({ "rose-pine/neovim", as = "rose-pine" })
+  use({
+    "rose-pine/neovim",
+    as = "rose-pine"
+  })
 
   use("cocopon/iceberg.vim");
 
   use("folke/tokyonight.nvim");
 
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
 
   use("tpope/vim-fugitive")
 
   use("sbdchd/neoformat")
 
-  use {
+  use({
     "VonHeikemen/lsp-zero.nvim",
     branch = "v1.x",
     requires = {
       -- LSP Support
-      { "neovim/nvim-lspconfig" }, -- Required
-      { "williamboman/mason.nvim" }, -- Optional
-      { "williamboman/mason-lspconfig.nvim" }, -- Optional
+      {
+        "neovim/nvim-lspconfig"
+      }, -- Required
+      {
+        "williamboman/mason.nvim"
+      }, -- Optional
+      {
+        "williamboman/mason-lspconfig.nvim"
+      }, -- Optional
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" }, -- Required
-      { "hrsh7th/cmp-nvim-lsp" }, -- Required
-      { "hrsh7th/cmp-buffer" }, -- Optional
-      { "hrsh7th/cmp-path" }, -- Optional
-      { "saadparwaiz1/cmp_luasnip" }, -- Optional
-      { "hrsh7th/cmp-nvim-lua" }, -- Optional
+      {
+        "hrsh7th/nvim-cmp"
+      }, -- Required
+      {
+        "hrsh7th/cmp-nvim-lsp"
+      }, -- Required
+      {
+        "hrsh7th/cmp-buffer"
+      }, -- Optional
+      {
+        "hrsh7th/cmp-path"
+      }, -- Optional
+      {
+        "saadparwaiz1/cmp_luasnip"
+      }, -- Optional
+      {
+        "hrsh7th/cmp-nvim-lua"
+      }, -- Optional
       -- Snippets
-      { "L3MON4D3/LuaSnip" }, -- Required
-      { "rafamadriz/friendly-snippets" } -- Optional
+      {
+        "L3MON4D3/LuaSnip"
+      }, -- Required
+      {
+        "rafamadriz/friendly-snippets"
+      } -- Optional
     }
-  }
+  })
 
-  use {
+  use({
     "nvim-tree/nvim-tree.lua",
     requires = {
       "nvim-tree/nvim-web-devicons" -- optional, for file icons
     }
-  }
+  })
 
-  use { -- Set lualine as statusline
+  use({ -- Set lualine as statusline
     "nvim-lualine/lualine.nvim",
     -- See `:help lualine.txt`
     opts = {
@@ -73,14 +109,17 @@ return require("packer").startup(function(use)
         section_separators = ""
       }
     }
-  }
+  })
 
-  use { -- Add indentation guides even on blank lines
+  use({ -- Add indentation guides even on blank lines
     "lukas-reineke/indent-blankline.nvim",
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
-    opts = { char = "┊", show_trailing_blankline_indent = false }
-  }
+    opts = {
+      char = "┊",
+      show_trailing_blankline_indent = false
+    }
+  })
 
   -- "gc" to comment visual regions/lines
   use("numToStr/Comment.nvim")

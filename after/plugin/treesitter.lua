@@ -1,7 +1,18 @@
-require"nvim-treesitter.configs".setup {
+require"nvim-treesitter.configs".setup({
   ensure_installed = {
-    "help", "javascript", "typescript", "svelte", "html", "css", "rust", "sql",
-    "prisma", "c", "lua", "vim", "help"
+    "help",
+    "javascript",
+    "typescript",
+    "svelte",
+    "html",
+    "css",
+    "rust",
+    "sql",
+    "prisma",
+    "c",
+    "lua",
+    "vim",
+    "help"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -67,8 +78,14 @@ require"nvim-treesitter.configs".setup {
     move = {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
-      goto_next_start = { ["äm"] = "@function.outer", ["ää"] = "@class.outer" },
-      goto_next_end = { ["äM"] = "@function.outer", ["äú"] = "@class.outer" },
+      goto_next_start = {
+        ["äm"] = "@function.outer",
+        ["ää"] = "@class.outer"
+      },
+      goto_next_end = {
+        ["äM"] = "@function.outer",
+        ["äú"] = "@class.outer"
+      },
       goto_previous_start = {
         ["úm"] = "@function.outer",
         ["úú"] = "@class.outer"
@@ -80,8 +97,12 @@ require"nvim-treesitter.configs".setup {
     },
     swap = {
       enable = true,
-      swap_next = { ["<leader>a"] = "@parameter.inner" },
-      swap_previous = { ["<leader>A"] = "@parameter.inner" }
+      swap_next = {
+        ["<leader>a"] = "@parameter.inner"
+      },
+      swap_previous = {
+        ["<leader>A"] = "@parameter.inner"
+      }
     }
   }
-}
+})

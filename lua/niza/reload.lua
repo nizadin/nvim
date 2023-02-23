@@ -9,5 +9,7 @@ function ReloadConfig()
   vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end
 
-vim.api.nvim_set_keymap("n", "<leader>rc", "<cmd>lua ReloadConfig()<CR>",
-  { noremap = true, silent = false })
+vim.api.nvim_set_keymap("n", "<leader>rc", "<cmd>lua ReloadConfig()<CR>", {
+  noremap = true,
+  silent = false
+})
