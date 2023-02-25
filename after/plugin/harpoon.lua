@@ -8,3 +8,4 @@ vim.keymap.set("n", "<leader>+", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<leader>ľ", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<leader>š", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>č", function() ui.nav_file(4) end)
+
