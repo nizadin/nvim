@@ -8,6 +8,7 @@ local lsp = require("lsp-zero").preset({
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 
+---@diagnostic disable-next-line: unused-local
 lsp.on_attach(function(client, bufnr)
   local opts = {
     buffer = bufnr
@@ -16,6 +17,7 @@ lsp.on_attach(function(client, bufnr)
 
   bind("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
   bind("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+  bind("n", "<leader>,", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 end)
 
 local cmp = require("cmp")

@@ -1,14 +1,14 @@
 require("lualine").setup({
   options = {
-    icons_enabled = true,
+    icons_enabled = false,
     theme = "auto",
     component_separators = {
-      left = "",
-      right = ""
+      left = "|",
+      right = "|"
     },
     section_separators = {
-      left = "",
-      right = ""
+      left = "",
+      right = ""
     },
     disabled_filetypes = {
       statusline = {},
@@ -36,6 +36,7 @@ require("lualine").setup({
       "filename"
     },
     lualine_x = {
+      "lsp-status",
       "encoding",
       "fileformat",
       "filetype"

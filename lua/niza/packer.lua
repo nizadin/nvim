@@ -1,17 +1,16 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
-  -- Packer can manage itself
+  -- Pack me, baby!
   use("wbthomason/packer.nvim")
 
+  -- 🏂 Vim motions training game
   use("ThePrimeagen/vim-be-good")
 
+  -- Fuzzy finder
   use({
     "nvim-telescope/telescope.nvim",
     tag = "0.1.1",
-    -- or                            , branch = '0.1.x',
     requires = {
       {
         "nvim-lua/plenary.nvim"
@@ -19,35 +18,36 @@ return require("packer").startup(function(use)
     }
   })
 
+  -- 🌳
   use("nvim-treesitter/nvim-treesitter", {
     run = ":TSUpdate"
   })
+
+  -- 🎣 Daddy Prime's solution for a quick navigation
   use("theprimeagen/harpoon")
+
+  -- Overpowered undo
   use("mbbill/undotree")
 
-  use("ghifarit53/tokyonight-vim")
+  -- Who needs background color anyways?
   use("xiyaowong/nvim-transparent")
 
-  use("joshdick/onedark.vim")
-
+  -- 🎨 Good color scheme
   use({
     "rose-pine/neovim",
     as = "rose-pine"
   })
 
-  use("cocopon/iceberg.vim");
-
+  -- 🌃 Another good color scheme
   use("folke/tokyonight.nvim");
 
-  use({
-    "catppuccin/nvim",
-    as = "catppuccin"
-  })
-
+  -- Do Git stuff inside of Vim
   use("tpope/vim-fugitive")
 
-  use("sbdchd/neoformat")
+  -- Me = lazy
+  use("jose-elias-alvarez/null-ls.nvim")
 
+  -- Me = very lazy
   use({
     "VonHeikemen/lsp-zero.nvim",
     branch = "v1.x",
@@ -62,6 +62,7 @@ return require("packer").startup(function(use)
       {
         "williamboman/mason-lspconfig.nvim"
       }, -- Optional
+
       -- Autocompletion
       {
         "hrsh7th/nvim-cmp"
@@ -91,37 +92,21 @@ return require("packer").startup(function(use)
     }
   })
 
+  -- I NEED TO SEE THAT DAMN FILE TREE, OTHERWISE I FEEL F*ING LOST!
+  use("nvim-tree/nvim-tree.lua")
+
+  -- Nice status line
+  use("nvim-lualine/lualine.nvim")
+
+  -- Add indentation guides even on blank lines
   use({
-    "nvim-tree/nvim-tree.lua",
-    requires = {
-      "nvim-tree/nvim-web-devicons" -- optional, for file icons
-    }
-  })
-
-  use({ -- Set lualine as statusline
-    "nvim-lualine/lualine.nvim",
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = "onedark",
-        component_separators = "|",
-        section_separators = ""
-      }
-    }
-  })
-
-  use({ -- Add indentation guides even on blank lines
     "lukas-reineke/indent-blankline.nvim",
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
     opts = {
       char = "┊",
       show_trailing_blankline_indent = false
     }
   })
 
-  -- "gc" to comment visual regions/lines
+  -- Smart comments
   use("numToStr/Comment.nvim")
 end)
-

@@ -1,3 +1,3 @@
---vim.cmd.colorscheme "iceberg"
+-- vim.cmd.colorscheme "iceberg"
 os.execute("~/.config/nvim/apperancenotifier.sh")
 

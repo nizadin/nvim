@@ -1,4 +1,4 @@
-require"nvim-treesitter.configs".setup({
+require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "help",
     "javascript",
@@ -54,10 +54,10 @@ require"nvim-treesitter.configs".setup({
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "<C-ä>",
-      node_incremental = "<C-ä>",
+      init_selection = "(",
+      node_incremental = "(",
       scope_incremental = "<C-s>",
-      node_decremental = "<C-Backspace>"
+      node_decremental = ")"
     }
   },
 

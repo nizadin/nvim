@@ -1,7 +1,10 @@
 vim.g.mapleader = " "
 
--- Netrw is my love
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+-- Netrw 💔
+-- vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+
+-- I like formatting manually
+vim.keymap.set("n", "<leader>qf", function() vim.lsp.buf.format() end)
 
 -- Align half-page scrolls
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -25,10 +28,10 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 
 -- Q is very bad
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "qq", "<nop>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "úd", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "äd", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>j", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
-

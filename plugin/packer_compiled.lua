@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -124,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
-  ["iceberg.vim"] = {
-    loaded = true,
-    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/iceberg.vim",
-    url = "https://github.com/cocopon/iceberg.vim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -154,10 +144,10 @@ _G.packer_plugins = {
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  neoformat = {
+  ["null-ls.nvim"] = {
     loaded = true,
-    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/neoformat",
-    url = "https://github.com/sbdchd/neoformat"
+    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -184,16 +174,6 @@ _G.packer_plugins = {
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
-  ["onedark.vim"] = {
-    loaded = true,
-    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/onedark.vim",
-    url = "https://github.com/joshdick/onedark.vim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -213,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/niza/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["tokyonight-vim"] = {
-    loaded = true,
-    path = "/Users/niza/.local/share/nvim/site/pack/packer/start/tokyonight-vim",
-    url = "https://github.com/ghifarit53/tokyonight-vim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
