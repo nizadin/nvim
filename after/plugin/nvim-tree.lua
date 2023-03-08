@@ -7,14 +7,21 @@ require("nvim-tree").setup({
   update_focused_file = {
     enable = true
   },
-  modified = {
-    enable = true,
-    show_on_dirs = true,
-    show_on_open_dirs = true
-  },
   filters = {
     exclude = {
-      ".env"
+      ".env",
+      ".eslintrc",
+      ".eslintrc.json",
+      ".eslintrc.yml",
+      ".eslintrc.js",
+      ".eslintrc.cjs",
+      ".prettierrc",
+      ".prettierrc.yml",
+      ".prettierrc.json",
+      ".prettierrc.js",
+      ".prettierrc.mjs",
+      ".npmrc",
+      ".nvmrc"
     }
   },
   renderer = {

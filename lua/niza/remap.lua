@@ -28,7 +28,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 
 -- Q is very bad
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "qq", "<nop>")
+vim.keymap.set("n", "q", "<nop>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "úd", vim.diagnostic.goto_prev)
